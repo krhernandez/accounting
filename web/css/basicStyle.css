@@ -1,0 +1,87 @@
+body{
+    background-color: silver; 
+}
+
+form {
+    display: block;
+    width: auto;
+    border: 2px black solid;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+#divLstLV2,#divLstLV3{
+    display: none;
+}
+
+#loginTable{    
+    width: auto;
+    padding: 10px;
+    margin: auto;
+}
+
+#selectMonth{
+    width: auto;
+    padding: 10px;
+    margin: auto;
+}
+
+#tableMonth thead{
+    background: #cc0033;
+}
+
+#tableMonth{
+    width: 100%;
+}
+
+select option{
+    text-align: left;
+}
+
+div{
+    display: block;
+    width: 500px;
+    border: 2px black solid;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+label{
+    font-size: 14px;
+    margin: 5px;
+}
+
+input{
+    border: 1px solid #ccc;
+}
+
+input:focus{
+    border: 1px solid #1668C4;
+}
+
+input[type="submit"]{
+    margin-bottom: 0;
+    background: #1668C4;
+    color: #fff;
+    border: none;
+    width: 100%;
+}
+
+input[type="submit"]:hover{
+    background: #4A88F4;
+    cursor: pointer;
+}
+
+select{
+    width: 100px;
+    margin: 5px;
+    text-align: center;
+}
