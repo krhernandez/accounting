@@ -42,9 +42,9 @@ public class UpdateListServlet extends HttpServlet {
 //        }
         
         ListData list = new ListData();
-        list.setData(request.getParameter("lstAccountingLV1"));
+        list.setData(request.getParameter("lstAccounting"));
         request.setAttribute("list", list);
-        request.getRequestDispatcher("updateLV1.jsp").include(request, response);
+        request.getRequestDispatcher("update.jsp").include(request, response);
         
     }
 

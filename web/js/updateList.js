@@ -1,35 +1,33 @@
-$(document).ready(function() {
-    
-    $("#lstALV1").submit(function() {
-        
-        $.ajax({
-            url: "UpdateListServlet", //pagina de destino
-            type: "POST", //metodo de envio
-            data: $("#lstALV1").serialize(), //donde estan los datos
-            beforeSend: function() {
+$(document).ready(function () {
 
-            },
-            success: function(res) {
-                $("#divLstLV2").show();
-                $("#divLstLV2").append(res); //mensaje desde verificar.php
-            }
-        });    
-    });
-    
-    $("#lstALV2").submit(function() {
-        
-        $.ajax({
-            url: "UpdateListLV2Servlet", //pagina de destino
-            type: "POST", //metodo de envio
-            data: $("#lstALV2").serialize(), //donde estan los datos
-            beforeSend: function() {
-                
-            },
-            success: function(res) {
-                $("#divLstLV3").show();
-                $("#divLstLV3").append(res); //mensaje desde verificar.php
-            }
-        });    
+    $("#lstA").submit(function () {
+        var handler = $("#lstAccounting").val();
+
+        if (handler >= 1100) {
+            $.ajax({
+                url: "noOptions.jsp", //pagina de destino
+                type: "POST", //metodo de envio
+                data: $("#lstA").serialize(), //donde estan los datos
+                beforeSend: function () {
+
+                },
+                success: function (res) {
+                    $("#divLst").html(res); //mensaje desde verificar.php
+                }
+            });
+        } else {
+            $.ajax({
+                url: "UpdateListServlet",
+                type: "POST",
+                data: $("#lstA").serialize(),
+                beforeSend: function () {
+
+                },
+                success: function (res) {
+                    $("#lstAccounting").html(res);
+                }
+            });
+        }
     });
 
 });

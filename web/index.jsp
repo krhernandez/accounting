@@ -23,22 +23,16 @@
         <sql:query var="result" dataSource="${connection}">
             select number,name from accounts
         </sql:query>
-        <div id="divLstLV1">
-            <h1>Lista LV1</h1>
-            <form action="JavaScript:void(0);" id="lstALV1" method="POST">
-                <select name="lstAccountingLV1">
+        <div id="divLst">
+            <h1>Lista</h1>
+            <form action="JavaScript:void(0);" id="lstA" method="POST">
+                <select name="lstAccounting" id="lstAccounting">
                     <c:forEach var="values" items="${result.rows}">
                         <option value="${values.number}">${values.name}</option>
                     </c:forEach>
                 </select>
                 <input type="submit" value="Update" />
             </form>            
-        </div>
-        <div id="divLstLV2" hidden="">
-            <h1>Lista LV2</h1>
-        </div>
-        <div id="divLstLV3" hidden="">
-            <h1>Lista LV3</h1>
         </div>
     </body>
 </html>
